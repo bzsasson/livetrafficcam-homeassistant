@@ -5,7 +5,7 @@ from datetime import timedelta
 from homeassistant.const import Platform
 
 DOMAIN = "livetrafficcam"
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 BASE_URL = "https://livetrafficcam.com"
 USER_AGENT = (
     f"livetrafficcam-homeassistant/{VERSION} "
