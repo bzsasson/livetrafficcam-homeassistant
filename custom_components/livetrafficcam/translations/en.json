@@ -1,0 +1,31 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Pick a state",
+        "data": { "state": "State" }
+      },
+      "entity": {
+        "title": "Pick a pass, bridge, tunnel or highway",
+        "description": "Passes, bridges and tunnels come with all their cameras. Highways ask you to pick cameras.",
+        "data": { "entity": "Place" }
+      },
+      "cameras": {
+        "title": "Pick cameras",
+        "description": "{count} cameras available. Highways allow up to {max}.",
+        "data": { "cameras": "Cameras" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach livetrafficcam.com. Try again in a minute.",
+      "select_at_least_one": "Pick at least one camera.",
+      "too_many": "Pick at most {max} cameras for a highway.",
+      "unknown_entity": "That place is not in the list. Pick one from the dropdown.",
+      "unknown_camera": "One of those cameras is not in the list. Pick from the list."
+    },
+    "abort": {
+      "already_configured": "This place is already set up.",
+      "no_entities": "No passes or highways are covered in this state yet."
+    }
+  }
+}
