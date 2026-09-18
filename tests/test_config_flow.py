@@ -86,6 +86,35 @@ async def test_unknown_entity_is_rejected(hass, aioclient_mock):
         )
 
 
+async def test_airport_is_a_point_place_with_all_cameras_preselected(hass, aioclient_mock):
+    aioclient_mock.get(
+        f"{BASE_URL}/api/entities.json?state=WA", json=load_fixture("entities_wa.json")
+    )
+    cams = {
+        "cams": [
+            {"id": 900 + i, "name": f"Harvey Field {i}", "image": f"/img/{900 + i}.jpg"}
+            for i in range(3)
+        ]
+    }
+    aioclient_mock.get(
+        f"{BASE_URL}/api/cams.json?entity=harvey-field-airport-washington", json=cams
+    )
+    result = await start(hass)
+    result = await hass.config_entries.flow.async_configure(result["flow_id"], {"state": "WA"})
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], {"entity": "harvey-field-airport-washington"}
+    )
+    assert result["step_id"] == "cameras"
+    default = result["data_schema"]({})["cameras"]
+    assert default == ["900", "901", "902"]
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], {"cameras": default}
+    )
+    assert result["type"] is FlowResultType.CREATE_ENTRY
+    assert result["title"] == "Harvey Field (WA)"
+    assert result["data"]["kind"] == "airport"
+
+
 async def test_highway_requires_selection_and_caps(hass, aioclient_mock):
     entities = load_fixture("entities_wa.json")
     highway = next(e for e in entities["entities"] if e["kind"] == "corridor")

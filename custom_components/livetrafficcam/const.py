@@ -17,7 +17,9 @@ EVENTS_INTERVAL = timedelta(minutes=10)
 IMAGE_HOLD_SECONDS = 60
 MAX_IMAGE_BYTES = 4 * 1024 * 1024
 HIGHWAY_MAX_CAMS = 25
-FEATURE_KINDS = ("pass", "bridge", "tunnel")
+# Point places: every camera preselected. Airports (FAA weather cams) joined
+# the entities API on 2026-09-18. Highways ("corridor") get the picker.
+FEATURE_KINDS = ("pass", "bridge", "tunnel", "airport")
 
 CONF_STATE = "state"
 CONF_SLUG = "slug"

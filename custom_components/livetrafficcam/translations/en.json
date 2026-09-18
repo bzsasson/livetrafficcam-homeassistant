@@ -6,8 +6,8 @@
         "data": { "state": "State" }
       },
       "entity": {
-        "title": "Pick a pass, bridge, tunnel or highway",
-        "description": "Passes, bridges and tunnels come with all their cameras. Highways ask you to pick cameras.",
+        "title": "Pick a pass, bridge, tunnel, airport or highway",
+        "description": "Passes, bridges, tunnels and airports come with all their cameras. Highways ask you to pick cameras.",
         "data": { "entity": "Place" }
       },
       "cameras": {

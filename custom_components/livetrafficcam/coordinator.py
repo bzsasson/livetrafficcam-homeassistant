@@ -30,6 +30,7 @@ KIND_MODEL = {
     "pass": "Mountain pass",
     "bridge": "Bridge",
     "tunnel": "Tunnel",
+    "airport": "Airport",
     "corridor": "Highway",
 }
 
