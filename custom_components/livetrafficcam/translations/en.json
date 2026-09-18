@@ -12,7 +12,7 @@
       },
       "cameras": {
         "title": "Pick cameras",
-        "description": "{count} cameras available. Highways allow up to {max}.",
+        "description": "Cameras available: {count}. Highways allow up to {max}.",
         "data": { "cameras": "Cameras" }
       }
     },
