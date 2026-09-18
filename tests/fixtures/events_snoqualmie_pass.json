@@ -1,0 +1,30 @@
+{
+  "entity": "snoqualmie-pass",
+  "feed": {
+    "agency": "WSDOT",
+    "fetched_at": "2026-09-18T09:11:30.815+00:00",
+    "fresh": true
+  },
+  "events": [
+    {
+      "event_type": "closure",
+      "headline": "Westbound milepost 53 to 52 Snoqualmie Pass. Monday, Sept. 14 to Thursday, Sept. 24 from 9 a.m. to 3:30 p.m. daily there will be single lane closures for bridge work.",
+      "agency": "WSDOT",
+      "severity": "minor",
+      "is_full_closure": true,
+      "starts_at": "2026-09-07T05:18:00+00:00",
+      "ends_at": "2026-09-24T22:30:00+00:00",
+      "last_updated": "2026-09-13T09:01:35.3+00:00"
+    },
+    {
+      "event_type": "roadwork",
+      "headline": "Eastbound mileposts 52 to 55 Snoqualmie pass: Monday at 6:30 p.m. through Wednesday at 3 p.m., there will be a continuous double lane closure with 12-foot width restriction for road work.",
+      "agency": "WSDOT",
+      "severity": "minor",
+      "is_full_closure": false,
+      "starts_at": "2026-06-22T02:47:00+00:00",
+      "ends_at": "2026-09-18T22:00:00+00:00",
+      "last_updated": "2026-09-13T09:07:01.56+00:00"
+    }
+  ]
+}

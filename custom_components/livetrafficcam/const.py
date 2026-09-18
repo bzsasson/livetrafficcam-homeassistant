@@ -15,6 +15,7 @@ USER_AGENT = (
 CAMS_INTERVAL = timedelta(minutes=5)
 EVENTS_INTERVAL = timedelta(minutes=10)
 IMAGE_HOLD_SECONDS = 60
+MAX_IMAGE_BYTES = 4 * 1024 * 1024
 HIGHWAY_MAX_CAMS = 25
 FEATURE_KINDS = ("pass", "bridge", "tunnel")
 

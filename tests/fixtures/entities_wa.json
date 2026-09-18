@@ -1,0 +1,850 @@
+{
+    "entities": [
+        {
+            "slug": "snoqualmie-pass",
+            "name": "Snoqualmie Pass",
+            "kind": "pass",
+            "route": "I-90",
+            "state": "WA",
+            "cam_count": 13,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/snoqualmie-pass/"
+        },
+        {
+            "slug": "stevens-pass",
+            "name": "Stevens Pass",
+            "kind": "pass",
+            "route": "US 2",
+            "state": "WA",
+            "cam_count": 4,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/stevens-pass/"
+        },
+        {
+            "slug": "tacoma-narrows-bridge",
+            "name": "Tacoma Narrows Bridge",
+            "kind": "bridge",
+            "route": "SR 16",
+            "state": "WA",
+            "cam_count": 14,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/tacoma-narrows-bridge/"
+        },
+        {
+            "slug": "blewett-pass",
+            "name": "Blewett Pass",
+            "kind": "pass",
+            "route": null,
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/blewett-pass/"
+        },
+        {
+            "slug": "i-182-washington",
+            "name": "I-182 in Washington",
+            "kind": "corridor",
+            "route": "I-182",
+            "state": "WA",
+            "cam_count": 4,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/i-182/"
+        },
+        {
+            "slug": "i-205-washington",
+            "name": "I-205 in Washington",
+            "kind": "corridor",
+            "route": "I-205",
+            "state": "WA",
+            "cam_count": 42,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/i-205/"
+        },
+        {
+            "slug": "i-405-washington",
+            "name": "I-405 in Washington",
+            "kind": "corridor",
+            "route": "I-405",
+            "state": "WA",
+            "cam_count": 101,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/i-405/"
+        },
+        {
+            "slug": "i-5-washington",
+            "name": "I-5 in Washington",
+            "kind": "corridor",
+            "route": "I-5",
+            "state": "WA",
+            "cam_count": 419,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/i-5/"
+        },
+        {
+            "slug": "i-82-washington",
+            "name": "I-82 in Washington",
+            "kind": "corridor",
+            "route": "I-82",
+            "state": "WA",
+            "cam_count": 15,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/i-82/"
+        },
+        {
+            "slug": "i-84-washington",
+            "name": "I-84 in Washington",
+            "kind": "corridor",
+            "route": "I-84",
+            "state": "WA",
+            "cam_count": 12,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/i-84/"
+        },
+        {
+            "slug": "i-90-floating-bridge",
+            "name": "I-90 Floating Bridge",
+            "kind": "bridge",
+            "route": "I-90",
+            "state": "WA",
+            "cam_count": 12,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/i-90-floating-bridge/"
+        },
+        {
+            "slug": "i-90-washington",
+            "name": "I-90 in Washington",
+            "kind": "corridor",
+            "route": "I-90",
+            "state": "WA",
+            "cam_count": 157,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/i-90/"
+        },
+        {
+            "slug": "mount-baker-ridge-tunnel",
+            "name": "Mount Baker Ridge Tunnel",
+            "kind": "tunnel",
+            "route": "I-90",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/mount-baker-ridge-tunnel/"
+        },
+        {
+            "slug": "ore217-washington",
+            "name": "ORE217 in Washington",
+            "kind": "corridor",
+            "route": "ORE217",
+            "state": "WA",
+            "cam_count": 2,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/ore217/"
+        },
+        {
+            "slug": "satus-pass",
+            "name": "Satus Pass",
+            "kind": "pass",
+            "route": null,
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/satus-pass/"
+        },
+        {
+            "slug": "sherman-pass",
+            "name": "Sherman Pass",
+            "kind": "pass",
+            "route": null,
+            "state": "WA",
+            "cam_count": 2,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sherman-pass/"
+        },
+        {
+            "slug": "ship-canal-bridge",
+            "name": "Ship Canal Bridge",
+            "kind": "bridge",
+            "route": "I-5",
+            "state": "WA",
+            "cam_count": 7,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/ship-canal-bridge/"
+        },
+        {
+            "slug": "sr-104-washington",
+            "name": "SR 104 in Washington",
+            "kind": "corridor",
+            "route": "SR 104",
+            "state": "WA",
+            "cam_count": 12,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-104/"
+        },
+        {
+            "slug": "sr-105-washington",
+            "name": "SR 105 in Washington",
+            "kind": "corridor",
+            "route": "SR 105",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-105/"
+        },
+        {
+            "slug": "sr-109-washington",
+            "name": "SR 109 in Washington",
+            "kind": "corridor",
+            "route": "SR 109",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-109/"
+        },
+        {
+            "slug": "sr-112-washington",
+            "name": "SR 112 in Washington",
+            "kind": "corridor",
+            "route": "SR 112",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-112/"
+        },
+        {
+            "slug": "sr-14-washington",
+            "name": "SR 14 in Washington",
+            "kind": "corridor",
+            "route": "SR 14",
+            "state": "WA",
+            "cam_count": 28,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-14/"
+        },
+        {
+            "slug": "sr-155-washington",
+            "name": "SR 155 in Washington",
+            "kind": "corridor",
+            "route": "SR 155",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-155/"
+        },
+        {
+            "slug": "sr-16-washington",
+            "name": "SR 16 in Washington",
+            "kind": "corridor",
+            "route": "SR 16",
+            "state": "WA",
+            "cam_count": 26,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-16/"
+        },
+        {
+            "slug": "sr-161-washington",
+            "name": "SR 161 in Washington",
+            "kind": "corridor",
+            "route": "SR 161",
+            "state": "WA",
+            "cam_count": 4,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-161/"
+        },
+        {
+            "slug": "sr-167-washington",
+            "name": "SR 167 in Washington",
+            "kind": "corridor",
+            "route": "SR 167",
+            "state": "WA",
+            "cam_count": 53,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-167/"
+        },
+        {
+            "slug": "sr-169-washington",
+            "name": "SR 169 in Washington",
+            "kind": "corridor",
+            "route": "SR 169",
+            "state": "WA",
+            "cam_count": 6,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-169/"
+        },
+        {
+            "slug": "sr-17-washington",
+            "name": "SR 17 in Washington",
+            "kind": "corridor",
+            "route": "SR 17",
+            "state": "WA",
+            "cam_count": 7,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-17/"
+        },
+        {
+            "slug": "sr-171-washington",
+            "name": "SR 171 in Washington",
+            "kind": "corridor",
+            "route": "SR 171",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-171/"
+        },
+        {
+            "slug": "sr-18-washington",
+            "name": "SR 18 in Washington",
+            "kind": "corridor",
+            "route": "SR 18",
+            "state": "WA",
+            "cam_count": 24,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-18/"
+        },
+        {
+            "slug": "sr-181-washington",
+            "name": "SR 181 in Washington",
+            "kind": "corridor",
+            "route": "SR 181",
+            "state": "WA",
+            "cam_count": 3,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-181/"
+        },
+        {
+            "slug": "sr-20-washington",
+            "name": "SR 20 in Washington",
+            "kind": "corridor",
+            "route": "SR 20",
+            "state": "WA",
+            "cam_count": 26,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-20/"
+        },
+        {
+            "slug": "sr-202-washington",
+            "name": "SR 202 in Washington",
+            "kind": "corridor",
+            "route": "SR 202",
+            "state": "WA",
+            "cam_count": 13,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-202/"
+        },
+        {
+            "slug": "sr-203-washington",
+            "name": "SR 203 in Washington",
+            "kind": "corridor",
+            "route": "SR 203",
+            "state": "WA",
+            "cam_count": 4,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-203/"
+        },
+        {
+            "slug": "sr-204-washington",
+            "name": "SR 204 in Washington",
+            "kind": "corridor",
+            "route": "SR 204",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-204/"
+        },
+        {
+            "slug": "sr-221-washington",
+            "name": "SR 221 in Washington",
+            "kind": "corridor",
+            "route": "SR 221",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-221/"
+        },
+        {
+            "slug": "sr-24-washington",
+            "name": "SR 24 in Washington",
+            "kind": "corridor",
+            "route": "SR 24",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-24/"
+        },
+        {
+            "slug": "sr-240-washington",
+            "name": "SR 240 in Washington",
+            "kind": "corridor",
+            "route": "SR 240",
+            "state": "WA",
+            "cam_count": 6,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-240/"
+        },
+        {
+            "slug": "sr-243-washington",
+            "name": "SR 243 in Washington",
+            "kind": "corridor",
+            "route": "SR 243",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-243/"
+        },
+        {
+            "slug": "sr-26-washington",
+            "name": "SR 26 in Washington",
+            "kind": "corridor",
+            "route": "SR 26",
+            "state": "WA",
+            "cam_count": 17,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-26/"
+        },
+        {
+            "slug": "sr-28-washington",
+            "name": "SR 28 in Washington",
+            "kind": "corridor",
+            "route": "SR 28",
+            "state": "WA",
+            "cam_count": 10,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-28/"
+        },
+        {
+            "slug": "sr-285-washington",
+            "name": "SR 285 in Washington",
+            "kind": "corridor",
+            "route": "SR 285",
+            "state": "WA",
+            "cam_count": 4,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-285/"
+        },
+        {
+            "slug": "sr-290-washington",
+            "name": "SR 290 in Washington",
+            "kind": "corridor",
+            "route": "SR 290",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-290/"
+        },
+        {
+            "slug": "sr-291-washington",
+            "name": "SR 291 in Washington",
+            "kind": "corridor",
+            "route": "SR 291",
+            "state": "WA",
+            "cam_count": 9,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-291/"
+        },
+        {
+            "slug": "sr-3-washington",
+            "name": "SR 3 in Washington",
+            "kind": "corridor",
+            "route": "SR 3",
+            "state": "WA",
+            "cam_count": 11,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-3/"
+        },
+        {
+            "slug": "sr-302-washington",
+            "name": "SR 302 in Washington",
+            "kind": "corridor",
+            "route": "SR 302",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-302/"
+        },
+        {
+            "slug": "sr-303-washington",
+            "name": "SR 303 in Washington",
+            "kind": "corridor",
+            "route": "SR 303",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-303/"
+        },
+        {
+            "slug": "sr-305-washington",
+            "name": "SR 305 in Washington",
+            "kind": "corridor",
+            "route": "SR 305",
+            "state": "WA",
+            "cam_count": 2,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-305/"
+        },
+        {
+            "slug": "sr-307-washington",
+            "name": "SR 307 in Washington",
+            "kind": "corridor",
+            "route": "SR 307",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-307/"
+        },
+        {
+            "slug": "sr-31-washington",
+            "name": "SR 31 in Washington",
+            "kind": "corridor",
+            "route": "SR 31",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-31/"
+        },
+        {
+            "slug": "sr-4-washington",
+            "name": "SR 4 in Washington",
+            "kind": "corridor",
+            "route": "SR 4",
+            "state": "WA",
+            "cam_count": 2,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-4/"
+        },
+        {
+            "slug": "sr-410-washington",
+            "name": "SR 410 in Washington",
+            "kind": "corridor",
+            "route": "SR 410",
+            "state": "WA",
+            "cam_count": 8,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-410/"
+        },
+        {
+            "slug": "sr-432-washington",
+            "name": "SR 432 in Washington",
+            "kind": "corridor",
+            "route": "SR 432",
+            "state": "WA",
+            "cam_count": 16,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-432/"
+        },
+        {
+            "slug": "sr-433-washington",
+            "name": "SR 433 in Washington",
+            "kind": "corridor",
+            "route": "SR 433",
+            "state": "WA",
+            "cam_count": 6,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-433/"
+        },
+        {
+            "slug": "sr-500-washington",
+            "name": "SR 500 in Washington",
+            "kind": "corridor",
+            "route": "SR 500",
+            "state": "WA",
+            "cam_count": 21,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-500/"
+        },
+        {
+            "slug": "sr-502-washington",
+            "name": "SR 502 in Washington",
+            "kind": "corridor",
+            "route": "SR 502",
+            "state": "WA",
+            "cam_count": 16,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-502/"
+        },
+        {
+            "slug": "sr-503-washington",
+            "name": "SR 503 in Washington",
+            "kind": "corridor",
+            "route": "SR 503",
+            "state": "WA",
+            "cam_count": 11,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-503/"
+        },
+        {
+            "slug": "sr-504-washington",
+            "name": "SR 504 in Washington",
+            "kind": "corridor",
+            "route": "SR 504",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-504/"
+        },
+        {
+            "slug": "sr-507-washington",
+            "name": "SR 507 in Washington",
+            "kind": "corridor",
+            "route": "SR 507",
+            "state": "WA",
+            "cam_count": 2,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-507/"
+        },
+        {
+            "slug": "sr-509-washington",
+            "name": "SR 509 in Washington",
+            "kind": "corridor",
+            "route": "SR 509",
+            "state": "WA",
+            "cam_count": 12,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-509/"
+        },
+        {
+            "slug": "sr-512-washington",
+            "name": "SR 512 in Washington",
+            "kind": "corridor",
+            "route": "SR 512",
+            "state": "WA",
+            "cam_count": 7,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-512/"
+        },
+        {
+            "slug": "sr-515-washington",
+            "name": "SR 515 in Washington",
+            "kind": "corridor",
+            "route": "SR 515",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-515/"
+        },
+        {
+            "slug": "sr-516-washington",
+            "name": "SR 516 in Washington",
+            "kind": "corridor",
+            "route": "SR 516",
+            "state": "WA",
+            "cam_count": 8,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-516/"
+        },
+        {
+            "slug": "sr-518-washington",
+            "name": "SR 518 in Washington",
+            "kind": "corridor",
+            "route": "SR 518",
+            "state": "WA",
+            "cam_count": 7,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-518/"
+        },
+        {
+            "slug": "sr-520-floating-bridge",
+            "name": "SR 520 Floating Bridge",
+            "kind": "bridge",
+            "route": "SR 520",
+            "state": "WA",
+            "cam_count": 24,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-520-floating-bridge/"
+        },
+        {
+            "slug": "sr-520-washington",
+            "name": "SR 520 in Washington",
+            "kind": "corridor",
+            "route": "SR 520",
+            "state": "WA",
+            "cam_count": 51,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-520/"
+        },
+        {
+            "slug": "sr-522-washington",
+            "name": "SR 522 in Washington",
+            "kind": "corridor",
+            "route": "SR 522",
+            "state": "WA",
+            "cam_count": 24,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-522/"
+        },
+        {
+            "slug": "sr-525-washington",
+            "name": "SR 525 in Washington",
+            "kind": "corridor",
+            "route": "SR 525",
+            "state": "WA",
+            "cam_count": 14,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-525/"
+        },
+        {
+            "slug": "sr-526-washington",
+            "name": "SR 526 in Washington",
+            "kind": "corridor",
+            "route": "SR 526",
+            "state": "WA",
+            "cam_count": 4,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-526/"
+        },
+        {
+            "slug": "sr-527-washington",
+            "name": "SR 527 in Washington",
+            "kind": "corridor",
+            "route": "SR 527",
+            "state": "WA",
+            "cam_count": 7,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-527/"
+        },
+        {
+            "slug": "sr-529-washington",
+            "name": "SR 529 in Washington",
+            "kind": "corridor",
+            "route": "SR 529",
+            "state": "WA",
+            "cam_count": 4,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-529/"
+        },
+        {
+            "slug": "sr-530-washington",
+            "name": "SR 530 in Washington",
+            "kind": "corridor",
+            "route": "SR 530",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-530/"
+        },
+        {
+            "slug": "sr-531-washington",
+            "name": "SR 531 in Washington",
+            "kind": "corridor",
+            "route": "SR 531",
+            "state": "WA",
+            "cam_count": 7,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-531/"
+        },
+        {
+            "slug": "sr-532-washington",
+            "name": "SR 532 in Washington",
+            "kind": "corridor",
+            "route": "SR 532",
+            "state": "WA",
+            "cam_count": 8,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-532/"
+        },
+        {
+            "slug": "sr-536-washington",
+            "name": "SR 536 in Washington",
+            "kind": "corridor",
+            "route": "SR 536",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-536/"
+        },
+        {
+            "slug": "sr-539-washington",
+            "name": "SR 539 in Washington",
+            "kind": "corridor",
+            "route": "SR 539",
+            "state": "WA",
+            "cam_count": 15,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-539/"
+        },
+        {
+            "slug": "sr-543-washington",
+            "name": "SR 543 in Washington",
+            "kind": "corridor",
+            "route": "SR 543",
+            "state": "WA",
+            "cam_count": 5,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-543/"
+        },
+        {
+            "slug": "sr-599-washington",
+            "name": "SR 599 in Washington",
+            "kind": "corridor",
+            "route": "SR 599",
+            "state": "WA",
+            "cam_count": 3,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-599/"
+        },
+        {
+            "slug": "sr-7-washington",
+            "name": "SR 7 in Washington",
+            "kind": "corridor",
+            "route": "SR 7",
+            "state": "WA",
+            "cam_count": 8,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-7/"
+        },
+        {
+            "slug": "sr-8-washington",
+            "name": "SR 8 in Washington",
+            "kind": "corridor",
+            "route": "SR 8",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-8/"
+        },
+        {
+            "slug": "sr-9-washington",
+            "name": "SR 9 in Washington",
+            "kind": "corridor",
+            "route": "SR 9",
+            "state": "WA",
+            "cam_count": 26,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-9/"
+        },
+        {
+            "slug": "sr-900-washington",
+            "name": "SR 900 in Washington",
+            "kind": "corridor",
+            "route": "SR 900",
+            "state": "WA",
+            "cam_count": 4,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-900/"
+        },
+        {
+            "slug": "sr-96-washington",
+            "name": "SR 96 in Washington",
+            "kind": "corridor",
+            "route": "SR 96",
+            "state": "WA",
+            "cam_count": 5,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-96/"
+        },
+        {
+            "slug": "sr-99-washington",
+            "name": "SR 99 in Washington",
+            "kind": "corridor",
+            "route": "SR 99",
+            "state": "WA",
+            "cam_count": 30,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/sr-99/"
+        },
+        {
+            "slug": "us-101-washington",
+            "name": "US 101 in Washington",
+            "kind": "corridor",
+            "route": "US 101",
+            "state": "WA",
+            "cam_count": 15,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/us-101/"
+        },
+        {
+            "slug": "us-12-washington",
+            "name": "US 12 in Washington",
+            "kind": "corridor",
+            "route": "US 12",
+            "state": "WA",
+            "cam_count": 18,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/us-12/"
+        },
+        {
+            "slug": "us-195-washington",
+            "name": "US 195 in Washington",
+            "kind": "corridor",
+            "route": "US 195",
+            "state": "WA",
+            "cam_count": 21,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/us-195/"
+        },
+        {
+            "slug": "us-2-washington",
+            "name": "US 2 in Washington",
+            "kind": "corridor",
+            "route": "US 2",
+            "state": "WA",
+            "cam_count": 40,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/us-2/"
+        },
+        {
+            "slug": "us-26-washington",
+            "name": "US 26 in Washington",
+            "kind": "corridor",
+            "route": "US 26",
+            "state": "WA",
+            "cam_count": 4,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/us-26/"
+        },
+        {
+            "slug": "us-395-washington",
+            "name": "US 395 in Washington",
+            "kind": "corridor",
+            "route": "US 395",
+            "state": "WA",
+            "cam_count": 32,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/us-395/"
+        },
+        {
+            "slug": "us-395-nsc-washington",
+            "name": "US 395 NSC in Washington",
+            "kind": "corridor",
+            "route": "US 395 NSC",
+            "state": "WA",
+            "cam_count": 14,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/us-395-nsc/"
+        },
+        {
+            "slug": "us-97-washington",
+            "name": "US 97 in Washington",
+            "kind": "corridor",
+            "route": "US 97",
+            "state": "WA",
+            "cam_count": 15,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/us-97/"
+        },
+        {
+            "slug": "us-97a-washington",
+            "name": "US 97A in Washington",
+            "kind": "corridor",
+            "route": "US 97A",
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/us-97a/"
+        },
+        {
+            "slug": "white-pass",
+            "name": "White Pass",
+            "kind": "pass",
+            "route": null,
+            "state": "WA",
+            "cam_count": 1,
+            "page": "https://livetrafficcam.com/traffic-cameras/washington/white-pass/"
+        }
+    ]
+}
