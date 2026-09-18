@@ -23,7 +23,7 @@ For every configured place (one config entry each):
 - `sensor.* cameras live`: how many of the place's cameras are live.
 - `binary_sensor.* disruption reported` and `full closure reported`,
   from the DOT's own event feed. They read unavailable, not off, when
-  the feed is stale, because a quiet sensor on a dead feed would lie.
+  the feed is stale, so a dead feed never looks like a quiet road.
 - Cameras whose agency only allows linking appear as a sensor with the
   agency's own page URL, never as an image.
 
