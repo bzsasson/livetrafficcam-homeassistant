@@ -34,9 +34,13 @@ Camera reliability across states is on the
 
 ## Install
 
-Through HACS: add `https://github.com/bzsasson/livetrafficcam-homeassistant`
-as a custom repository (type Integration), install, restart, then
+The integration is in the HACS catalog (since October 2026). In HACS,
+search for "Live Traffic Cam", install, restart Home Assistant, then
 Settings > Devices & services > Add integration > Live Traffic Cam.
+
+Or open it in your own Home Assistant with one click:
+
+[![Open your Home Assistant instance and show the Live Traffic Cam repository in HACS.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=bzsasson&repository=livetrafficcam-homeassistant&category=integration)
 
 Manually: copy `custom_components/livetrafficcam` into your
 `config/custom_components/` and restart.
