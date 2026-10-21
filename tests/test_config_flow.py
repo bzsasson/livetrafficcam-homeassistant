@@ -81,9 +81,7 @@ async def test_unknown_entity_is_rejected(hass, aioclient_mock):
     result = await start(hass)
     result = await hass.config_entries.flow.async_configure(result["flow_id"], {"state": "WA"})
     with pytest.raises(InvalidData):
-        await hass.config_entries.flow.async_configure(
-            result["flow_id"], {"entity": "not-offered"}
-        )
+        await hass.config_entries.flow.async_configure(result["flow_id"], {"entity": "not-offered"})
 
 
 async def test_airport_is_a_point_place_with_all_cameras_preselected(hass, aioclient_mock):
@@ -107,9 +105,7 @@ async def test_airport_is_a_point_place_with_all_cameras_preselected(hass, aiocl
     assert result["step_id"] == "cameras"
     default = result["data_schema"]({})["cameras"]
     assert default == ["900", "901", "902"]
-    result = await hass.config_entries.flow.async_configure(
-        result["flow_id"], {"cameras": default}
-    )
+    result = await hass.config_entries.flow.async_configure(result["flow_id"], {"cameras": default})
     assert result["type"] is FlowResultType.CREATE_ENTRY
     assert result["title"] == "Harvey Field (WA)"
     assert result["data"]["kind"] == "airport"
@@ -134,11 +130,51 @@ async def test_highway_requires_selection_and_caps(hass, aioclient_mock):
     )
     assert result["errors"] == {"cameras": "too_many"}
     with pytest.raises(InvalidData):
-        await hass.config_entries.flow.async_configure(
-            result["flow_id"], {"cameras": ["1", "999"]}
-        )
+        await hass.config_entries.flow.async_configure(result["flow_id"], {"cameras": ["1", "999"]})
     result = await hass.config_entries.flow.async_configure(
         result["flow_id"], {"cameras": ["1", "2", "3"]}
     )
     assert result["type"] is FlowResultType.CREATE_ENTRY
     assert result["data"][CONF_CAM_IDS] == [1, 2, 3]
+
+
+async def test_city_reads_cams_by_place_and_caps_like_a_highway(hass, aioclient_mock):
+    entities = load_fixture("entities_wa.json")
+    city = next(e for e in entities["entities"] if e["kind"] == "city")
+    aioclient_mock.get(f"{BASE_URL}/api/entities.json?state=WA", json=entities)
+    cams = {"cams": [{"id": i, "name": f"Cam {i}", "image": f"/img/{i}.jpg"} for i in range(1, 31)]}
+    # Cities are places on the site: the flow must ask cams.json?place=, never ?entity=.
+    aioclient_mock.get(f"{BASE_URL}/api/cams.json?place={city['slug']}", json=cams)
+    result = await start(hass)
+    result = await hass.config_entries.flow.async_configure(result["flow_id"], {"state": "WA"})
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], {"entity": city["slug"]}
+    )
+    assert result["step_id"] == "cameras"
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], {"cameras": [str(i) for i in range(1, 27)]}
+    )
+    assert result["errors"] == {"cameras": "too_many"}
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], {"cameras": ["1", "2"]}
+    )
+    assert result["type"] is FlowResultType.CREATE_ENTRY
+    assert result["data"]["kind"] == "city"
+    assert result["data"][CONF_CAM_IDS] == [1, 2]
+
+
+async def test_metro_is_listed_and_uses_the_picker(hass, aioclient_mock):
+    entities = load_fixture("entities_wa.json")
+    metro = next(e for e in entities["entities"] if e["kind"] == "metro")
+    aioclient_mock.get(f"{BASE_URL}/api/entities.json?state=WA", json=entities)
+    cams = {"cams": [{"id": i, "name": f"Cam {i}", "image": f"/img/{i}.jpg"} for i in range(1, 5)]}
+    aioclient_mock.get(f"{BASE_URL}/api/cams.json?entity={metro['slug']}", json=cams)
+    result = await start(hass)
+    result = await hass.config_entries.flow.async_configure(result["flow_id"], {"state": "WA"})
+    result = await hass.config_entries.flow.async_configure(
+        result["flow_id"], {"entity": metro["slug"]}
+    )
+    assert result["step_id"] == "cameras"
+    # A picker, so nothing is preselected: an empty submit is an error, not an entry.
+    result = await hass.config_entries.flow.async_configure(result["flow_id"], {"cameras": []})
+    assert result["errors"] == {"cameras": "select_at_least_one"}

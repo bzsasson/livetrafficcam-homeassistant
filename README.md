@@ -1,6 +1,6 @@
 # Live Traffic Cam for Home Assistant
 
-Put a mountain pass, bridge, tunnel, airport or highway on your
+Put a mountain pass, bridge, tunnel, airport, highway, city or metro area on your
 dashboard: the latest still from each official camera, a verified-live
 sensor per camera, a cameras-live count, and reported disruptions for
 that place. Airport cameras are the FAA's weather cams.
@@ -54,9 +54,11 @@ Manually: copy `custom_components/livetrafficcam` into your
   California, Utah, Nevada, Arizona, Georgia, Wisconsin, Alaska, Idaho,
   Iowa. The list grows with the site; the state dropdown shows every
   state and says when one has nothing yet.
-- Highways can have hundreds of cameras; the flow asks you to pick up
-  to 25. Passes, bridges, tunnels and airports come with all their
-  cameras.
+- Highways, cities and metro areas can have hundreds of cameras; the
+  flow asks you to pick up to 25. Passes, bridges, tunnels and airports
+  come with all their cameras. Cities get cameras only: they have no
+  agency event feed of their own, so no disruption sensors (since
+  v1.1.0, October 2026).
 - Stills refresh at most once a minute per camera; camera data every
   five minutes; disruptions every ten. No video in this version.
 - If you want travel times, or incidents from a 511 system you hold a

@@ -854,6 +854,24 @@
       "state": "WA",
       "cam_count": 3,
       "page": "https://livetrafficcam.com/traffic-cameras/washington/harvey-field-airport/"
+    },
+    {
+      "slug": "seattle-metro-washington",
+      "name": "Seattle Metro",
+      "kind": "metro",
+      "route": null,
+      "state": "WA",
+      "cam_count": 60,
+      "page": "https://livetrafficcam.com/traffic-cameras/washington/seattle-metro/"
+    },
+    {
+      "slug": "bellevue-wa",
+      "name": "Bellevue",
+      "kind": "city",
+      "route": null,
+      "state": "WA",
+      "cam_count": 12,
+      "page": "https://livetrafficcam.com/traffic-cameras/washington/bellevue/"
     }
   ]
 }

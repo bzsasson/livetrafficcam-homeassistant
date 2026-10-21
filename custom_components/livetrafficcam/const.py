@@ -5,7 +5,7 @@ from datetime import timedelta
 from homeassistant.const import Platform
 
 DOMAIN = "livetrafficcam"
-VERSION = "1.0.2"
+VERSION = "1.1.0"
 BASE_URL = "https://livetrafficcam.com"
 USER_AGENT = (
     f"livetrafficcam-homeassistant/{VERSION} "
@@ -18,8 +18,14 @@ IMAGE_HOLD_SECONDS = 60
 MAX_IMAGE_BYTES = 4 * 1024 * 1024
 HIGHWAY_MAX_CAMS = 25
 # Point places: every camera preselected. Airports (FAA weather cams) joined
-# the entities API on 2026-09-18. Highways ("corridor") get the picker.
+# the entities API on 2026-09-18. Highways ("corridor") get the picker, and
+# so do metro areas and cities, which joined the API on 2026-10-21.
 FEATURE_KINDS = ("pass", "bridge", "tunnel", "airport")
+PICK_KINDS = ("corridor", "metro", "city")
+# Cities live in the site's places table: cams.json reads them through
+# ?place= and they have no event feed, so a city entry gets no disruption
+# sensors.
+CITY_KIND = "city"
 
 CONF_STATE = "state"
 CONF_SLUG = "slug"

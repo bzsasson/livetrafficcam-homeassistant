@@ -79,3 +79,32 @@ async def test_setup_retries_when_api_down(hass, aioclient_mock):
     assert not await hass.config_entries.async_setup(entry.entry_id)
     await hass.async_block_till_done()
     assert entry.state is ConfigEntryState.SETUP_RETRY
+
+
+async def test_city_entry_polls_place_and_has_no_events(hass, aioclient_mock):
+    cams = load_fixture("cams_snoqualmie_pass.json")
+    aioclient_mock.get(f"{BASE_URL}/api/cams.json?place=bellevue-wa", json=cams)
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        unique_id="bellevue-wa",
+        title="Bellevue (WA)",
+        data={
+            CONF_STATE: "WA",
+            CONF_SLUG: "bellevue-wa",
+            CONF_NAME: "Bellevue",
+            CONF_KIND: "city",
+            CONF_ROUTE: None,
+            CONF_PAGE: "https://livetrafficcam.com/traffic-cameras/washington/bellevue/",
+            CONF_CAM_IDS: [c["id"] for c in cams["cams"]],
+        },
+    )
+    entry.add_to_hass(hass)
+    assert await hass.config_entries.async_setup(entry.entry_id)
+    await hass.async_block_till_done()
+    rd = entry.runtime_data
+    assert set(rd.cams.data) == set(entry.data[CONF_CAM_IDS])
+    assert rd.events is None
+    # No events.json request is made for a city.
+    assert not any("events.json" in str(call[1]) for call in aioclient_mock.mock_calls)
+    assert hass.states.get("binary_sensor.bellevue_wa_disruption_reported") is None
+    assert await hass.config_entries.async_unload(entry.entry_id)

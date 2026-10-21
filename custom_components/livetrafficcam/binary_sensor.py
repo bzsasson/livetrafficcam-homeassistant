@@ -35,8 +35,9 @@ async def async_setup_entry(
     entities: list[BinarySensorEntity] = [
         VerifiedLiveSensor(rd.cams, entry, cam_id) for cam_id in rd.cams.data
     ]
-    entities.append(DisruptionSensor(rd.events, entry, attribution))
-    entities.append(FullClosureSensor(rd.events, entry, attribution))
+    if rd.events is not None:  # cities have no event feed
+        entities.append(DisruptionSensor(rd.events, entry, attribution))
+        entities.append(FullClosureSensor(rd.events, entry, attribution))
     async_add_entities(entities)
 
 

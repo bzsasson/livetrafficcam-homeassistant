@@ -32,6 +32,8 @@ KIND_MODEL = {
     "tunnel": "Tunnel",
     "airport": "Airport",
     "corridor": "Highway",
+    "metro": "Metro area",
+    "city": "City",
 }
 
 
@@ -48,11 +50,12 @@ class CamsCoordinator(DataUpdateCoordinator[dict[int, dict[str, Any]]]):
         )
         self.api = api
         self.slug: str = entry.data[CONF_SLUG]
+        self.kind: str | None = entry.data.get(CONF_KIND)
         self._wanted: set[int] = set(entry.data[CONF_CAM_IDS])
 
     async def _async_update_data(self) -> dict[int, dict[str, Any]]:
         try:
-            cams = await self.api.cams(self.slug)
+            cams = await self.api.cams(self.slug, self.kind)
         except ApiError as err:
             raise UpdateFailed(str(err)) from err
         return {c["id"]: c for c in cams if c.get("id") in self._wanted}
@@ -85,7 +88,8 @@ class RuntimeData:
 
     api: LiveTrafficCamApi
     cams: CamsCoordinator
-    events: EventsCoordinator
+    # None for a city: cities have no event feed (2026-10-21).
+    events: EventsCoordinator | None
 
 
 type LiveTrafficCamConfigEntry = ConfigEntry[RuntimeData]

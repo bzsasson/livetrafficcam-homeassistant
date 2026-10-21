@@ -26,6 +26,7 @@ from .const import (
     DOMAIN,
     FEATURE_KINDS,
     HIGHWAY_MAX_CAMS,
+    PICK_KINDS,
     US_STATES,
 )
 
@@ -65,10 +66,13 @@ class LiveTrafficCamConfigFlow(ConfigFlow, domain=DOMAIN):
             else:
                 if not rows:
                     return self.async_abort(reason="no_entities")
-                # Passes, bridges and tunnels first, highways after; API order within each.
+                # Passes, bridges, tunnels and airports first, then highways,
+                # metro areas and cities; API order within each group.
                 features = [e for e in rows if e.get("kind") in FEATURE_KINDS]
                 highways = [e for e in rows if e.get("kind") == "corridor"]
-                self._entities = {e["slug"]: e for e in features + highways}
+                metros = [e for e in rows if e.get("kind") == "metro"]
+                cities = [e for e in rows if e.get("kind") == "city"]
+                self._entities = {e["slug"]: e for e in features + highways + metros + cities}
                 return await self.async_step_entity()
         options = [SelectOptionDict(value=abbr, label=name) for abbr, name in US_STATES.items()]
         return self.async_show_form(
@@ -97,7 +101,7 @@ class LiveTrafficCamConfigFlow(ConfigFlow, domain=DOMAIN):
                 await self.async_set_unique_id(chosen["slug"])
                 self._abort_if_unique_id_configured()
                 try:
-                    self._cams = await self._api.cams(chosen["slug"])
+                    self._cams = await self._api.cams(chosen["slug"], chosen.get("kind"))
                 except ApiError:
                     errors["base"] = "cannot_connect"
                 else:
@@ -122,7 +126,9 @@ class LiveTrafficCamConfigFlow(ConfigFlow, domain=DOMAIN):
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
         assert self._entity is not None
-        is_highway = self._entity["kind"] == "corridor"
+        # Highways, metro areas and cities can list hundreds of cameras, so
+        # the user picks up to HIGHWAY_MAX_CAMS; point places preselect all.
+        is_highway = self._entity["kind"] in PICK_KINDS
         errors: dict[str, str] = {}
         if user_input is not None:
             requested = [str(v) for v in user_input.get("cameras", [])]

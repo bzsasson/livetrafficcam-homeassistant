@@ -6,26 +6,26 @@
         "data": { "state": "State" }
       },
       "entity": {
-        "title": "Pick a pass, bridge, tunnel, airport or highway",
-        "description": "Passes, bridges, tunnels and airports come with all their cameras. Highways ask you to pick cameras.",
+        "title": "Pick a pass, bridge, tunnel, airport, highway, metro area or city",
+        "description": "Passes, bridges, tunnels and airports come with all their cameras. Highways, metro areas and cities ask you to pick cameras. Cities get cameras only, no disruption sensors.",
         "data": { "entity": "Place" }
       },
       "cameras": {
         "title": "Pick cameras",
-        "description": "Cameras available: {count}. Highways allow up to {max}.",
+        "description": "Cameras available: {count}. Highways, metro areas and cities allow up to {max}.",
         "data": { "cameras": "Cameras" }
       }
     },
     "error": {
       "cannot_connect": "Could not reach livetrafficcam.com. Try again in a minute.",
       "select_at_least_one": "Pick at least one camera.",
-      "too_many": "Pick at most {max} cameras for a highway.",
+      "too_many": "Pick at most {max} cameras for a highway, metro area or city.",
       "unknown_entity": "That place is not in the list. Pick one from the dropdown.",
       "unknown_camera": "One of those cameras is not in the list. Pick from the list."
     },
     "abort": {
       "already_configured": "This place is already set up.",
-      "no_entities": "No passes or highways are covered in this state yet."
+      "no_entities": "No passes, highways or cities are covered in this state yet."
     }
   }
 }

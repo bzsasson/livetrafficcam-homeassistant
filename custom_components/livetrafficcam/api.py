@@ -38,8 +38,10 @@ class LiveTrafficCamApi:
         body = await self._get_json("/api/entities.json", {"state": state})
         return list(body.get("entities", []))
 
-    async def cams(self, slug: str) -> list[dict[str, Any]]:
-        body = await self._get_json("/api/cams.json", {"entity": slug})
+    async def cams(self, slug: str, kind: str | None = None) -> list[dict[str, Any]]:
+        # Cities are places, not entities, on the site (2026-10-21).
+        param = "place" if kind == "city" else "entity"
+        body = await self._get_json("/api/cams.json", {param: slug})
         return list(body.get("cams", []))
 
     async def events(self, slug: str) -> dict[str, Any]:
