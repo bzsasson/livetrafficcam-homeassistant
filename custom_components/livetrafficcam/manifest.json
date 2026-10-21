@@ -3,10 +3,10 @@
   "name": "Live Traffic Cam",
   "codeowners": ["@bzsasson"],
   "config_flow": true,
-  "documentation": "https://github.com/bzsasson/livetrafficcam-homeassistant",
+  "documentation": "https://livetrafficcam.com/guides/home-assistant/",
   "integration_type": "hub",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/bzsasson/livetrafficcam-homeassistant/issues",
   "requirements": [],
-  "version": "1.0.1"
+  "version": "1.0.2"
 }

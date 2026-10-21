@@ -10,6 +10,9 @@ incident and closure reports.
 
 No API keys. Pick a state, pick a place, pick cameras, done.
 
+Documentation, with dashboard and automation recipes:
+[livetrafficcam.com/guides/home-assistant](https://livetrafficcam.com/guides/home-assistant/).
+
 ## What you get
 
 For every configured place (one config entry each):
